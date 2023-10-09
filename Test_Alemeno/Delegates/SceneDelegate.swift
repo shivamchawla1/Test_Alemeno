@@ -11,12 +11,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    var complexAuthProfileManager = ComplexAuthProfileManager(userId: "1", username: "shivam")
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if complexAuthProfileManager.isLoggedIn {
+            let stb = UIStoryboard.init(name: "Main", bundle: nil)
+            let welcomeView = stb.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            let nvc = UINavigationController(rootViewController: welcomeView)
+            nvc.navigationBar.isHidden = true
+            self.window?.rootViewController = nvc
+        }else {
+            let stb = UIStoryboard.init(name: "Main", bundle: nil)
+            let welcomeView = stb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let nvc = UINavigationController(rootViewController: welcomeView )
+            nvc.navigationBar.isHidden = true
+            welcomeView.complexAuthProfileManager = self.complexAuthProfileManager
+            self.window?.rootViewController = nvc
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

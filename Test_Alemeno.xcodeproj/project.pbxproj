@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		16A7F2092AD43C3500E23064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A7F2082AD43C3500E23064 /* AppDelegate.swift */; };
 		16A7F20B2AD43C3500E23064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A7F20A2AD43C3500E23064 /* SceneDelegate.swift */; };
-		16A7F20D2AD43C3500E23064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A7F20C2AD43C3500E23064 /* ViewController.swift */; };
+		16A7F20D2AD43C3500E23064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A7F20C2AD43C3500E23064 /* LoginViewController.swift */; };
 		16A7F2102AD43C3500E23064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A7F20E2AD43C3500E23064 /* Main.storyboard */; };
 		16A7F2122AD43C3900E23064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A7F2112AD43C3900E23064 /* Assets.xcassets */; };
 		16A7F2152AD43C3900E23064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A7F2132AD43C3900E23064 /* LaunchScreen.storyboard */; };
+		16A7F21D2AD44A5B00E23064 /* ComplexAuthProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A7F21C2AD44A5B00E23064 /* ComplexAuthProfileManager.swift */; };
+		16E66FF32AD454320062B2D9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E66FF22AD454320062B2D9 /* RegisterViewController.swift */; };
+		16E66FF52AD454920062B2D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E66FF42AD454920062B2D9 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16A7F2052AD43C3500E23064 /* Test_Alemeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_Alemeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16A7F2082AD43C3500E23064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16A7F20A2AD43C3500E23064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16A7F20C2AD43C3500E23064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16A7F20C2AD43C3500E23064 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		16A7F20F2AD43C3500E23064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16A7F2112AD43C3900E23064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16A7F2142AD43C3900E23064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16A7F2162AD43C3900E23064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16A7F21C2AD44A5B00E23064 /* ComplexAuthProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexAuthProfileManager.swift; sourceTree = "<group>"; };
+		16E66FF22AD454320062B2D9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		16E66FF42AD454920062B2D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		16A7F2072AD43C3500E23064 /* Test_Alemeno */ = {
 			isa = PBXGroup;
 			children = (
-				16A7F2082AD43C3500E23064 /* AppDelegate.swift */,
-				16A7F20A2AD43C3500E23064 /* SceneDelegate.swift */,
-				16A7F20C2AD43C3500E23064 /* ViewController.swift */,
-				16A7F20E2AD43C3500E23064 /* Main.storyboard */,
-				16A7F2112AD43C3900E23064 /* Assets.xcassets */,
-				16A7F2132AD43C3900E23064 /* LaunchScreen.storyboard */,
+				16E66FFA2AD45DF60062B2D9 /* AuthManager */,
+				16E66FF82AD45DD60062B2D9 /* View */,
+				16E66FF92AD45DE00062B2D9 /* ViewControllers */,
+				16E66FF72AD45DCC0062B2D9 /* Assets */,
+				16E66FF62AD45DBF0062B2D9 /* Delegates */,
 				16A7F2162AD43C3900E23064 /* Info.plist */,
 			);
 			path = Test_Alemeno;
+			sourceTree = "<group>";
+		};
+		16E66FF62AD45DBF0062B2D9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				16A7F2082AD43C3500E23064 /* AppDelegate.swift */,
+				16A7F20A2AD43C3500E23064 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		16E66FF72AD45DCC0062B2D9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				16A7F2112AD43C3900E23064 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		16E66FF82AD45DD60062B2D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16A7F20E2AD43C3500E23064 /* Main.storyboard */,
+				16A7F2132AD43C3900E23064 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16E66FF92AD45DE00062B2D9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				16A7F20C2AD43C3500E23064 /* LoginViewController.swift */,
+				16E66FF22AD454320062B2D9 /* RegisterViewController.swift */,
+				16E66FF42AD454920062B2D9 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		16E66FFA2AD45DF60062B2D9 /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				16A7F21C2AD44A5B00E23064 /* ComplexAuthProfileManager.swift */,
+			);
+			path = AuthManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16A7F20D2AD43C3500E23064 /* ViewController.swift in Sources */,
+				16E66FF52AD454920062B2D9 /* ProfileViewController.swift in Sources */,
+				16A7F21D2AD44A5B00E23064 /* ComplexAuthProfileManager.swift in Sources */,
+				16E66FF32AD454320062B2D9 /* RegisterViewController.swift in Sources */,
+				16A7F20D2AD43C3500E23064 /* LoginViewController.swift in Sources */,
 				16A7F2092AD43C3500E23064 /* AppDelegate.swift in Sources */,
 				16A7F20B2AD43C3500E23064 /* SceneDelegate.swift in Sources */,
 			);
